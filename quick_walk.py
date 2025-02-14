@@ -7,8 +7,8 @@ import numpy as np
 from math import radians, cos, sin, asin, sqrt
 
 # Paths to the CSV files
-path_acc = "Linear Accelerometer.csv"
-path_gps = "Location.csv"
+path_acc = "https://raw.githubusercontent.com/sannatikk/walking-data-analysis/refs/heads/main/Linear%20Accelerometer.csv"
+path_gps = "https://raw.githubusercontent.com/sannatikk/walking-data-analysis/refs/heads/main/Location.csv"
 
 # Load data
 df_acc = pd.read_csv('Linear Accelerometer.csv')
