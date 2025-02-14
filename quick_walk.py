@@ -11,8 +11,8 @@ path_acc = "https://raw.githubusercontent.com/sannatikk/walking-data-analysis/re
 path_gps = "https://raw.githubusercontent.com/sannatikk/walking-data-analysis/refs/heads/main/Location.csv"
 
 # Load data
-df_acc = pd.read_csv('Linear Accelerometer.csv')
-df_gps = pd.read_csv('Location.csv')
+df_acc = pd.read_csv(path_acc)
+df_gps = pd.read_csv(path_gps)
 
 # Streamlit UI
 st.title("Walking Data Analysis")
