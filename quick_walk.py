@@ -120,7 +120,7 @@ cutoff = 1 / 0.5  # Adjustable cutoff frequency
 filtered_signal = butter_lowpass(kiihtyvyys, cutoff, fs, nyq, order)
 
 # Plot Unfiltered vs. Filtered Acceleration
-st.subheader("Raw vs. Lowpass-Filtered Acceleration Data")
+st.subheader("Original vs. Lowpass-Filtered Acceleration Data")
 df_filtered = pd.DataFrame({
     "Time (s)": aika,
     "Raw Acceleration": kiihtyvyys,
