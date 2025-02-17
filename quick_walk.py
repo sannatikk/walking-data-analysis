@@ -25,11 +25,11 @@ st.write("This app analyzes walking data taken using the Phyphox app for smartph
 # Y-axis Linear Acceleration vs. Time
 st.header("Linear Acceleration vs. Time")
 
-st.subheader("Raw Acceleration Data")
+st.subheader("Acceleration Data (Y-axis)")
 st.line_chart(df_acc, x = 'Time (s)', y = 'Y (m/s^2)', y_label = 'Linear Acceleration (m/s^2)', x_label = 'Time (s)')
 
 # Zoomed-in version
-st.subheader("Raw Acceleration Data, Zoomed-in View")
+st.subheader("Acceleration Data (Y-axis), Zoomed-in View")
 time_min, time_max = st.slider("Select Time Range", min_value=float(df_acc['Time (s)'].min()), max_value=float(df_acc['Time (s)'].max()), value=(200.0, 230.0))
 
 df_zoomed = df_acc[(df_acc['Time (s)'] >= time_min) & (df_acc['Time (s)'] <= time_max)]
@@ -40,7 +40,7 @@ st.line_chart(df_zoomed, x = 'Time (s)', y = 'Y (m/s^2)', y_label = 'Linear Acce
 
 
 # Fourier Transform and Power Spectral Density (PSD)
-st.header("Power Spectral Density (Fourier Transform)")
+st.header("Power Spectral Density (from Fourier Transform)")
 f = df_acc['Y (m/s^2)']
 t = df_acc['Time (s)']
 N = len(f)
